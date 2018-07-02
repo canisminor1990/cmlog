@@ -72,6 +72,8 @@ Terminal log:
 
 - `cmlog.dye(color, ...str)`
 
+> return: `string`
+
 ### Colors
 
 - `black`
