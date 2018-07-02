@@ -18,7 +18,7 @@
 		"logger"
 	],
 	"scripts": {
-		"build": "babel src/**/* -d dist",
+		"build": "babel src/index.js -d dist",
 		"test": "node src/test.js",
 		"release": "standard-version && yarn build && git push --follow-tags && npm publish",
 		"lint": "lint-staged",
