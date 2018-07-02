@@ -1,5 +1,8 @@
 # Cmlog
 
+[![NPM version](https://img.shields.io/npm/v/cmlog.svg?style=flat)](https://npmjs.org/package/cmlog)
+[![NPM downloads](http://img.shields.io/npm/dm/cmlog.svg?style=flat)](https://npmjs.org/package/cmlog)
+
 Emoji console logger
 
 ## Installation
@@ -29,6 +32,8 @@ cmlog.info('Some extra info is here')
 cmlog.error(new Error('Foo'))
 ```
 
+![preview](https://github.com/canisminor1990/cmlog/raw/master/public/preview.png)
+
 ## Types
 
 A list of all available default types:
@@ -51,17 +56,16 @@ A list of all available default types:
 - `cmlog.json(obj, title)`
 
 ```js
-const obj = "{foo:bar}"
-cmlog.json(obj,"Format")
+cmlog.json("{foo:bar}","Format")
 ```
 
 Terminal log:
 
 ```bash
 ⚪ Format
-	{
-		foo: bar
-	}
+  {
+    foo: bar
+  }
 ```
 
 ## Dye string

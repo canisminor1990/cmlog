@@ -14,16 +14,18 @@ const emoji = {
   done: String.fromCodePoint(0x2728), // ✨
 };
 class Cmlog {
-  _maxlength = 8;
-  _title(emoji, text, color) {
-    let spacing = '';
-    if (text.length < this._maxlength) {
-      for (let i = 0; i < this._maxlength - text.length; i++) {
-        spacing += ' ';
+  constructor() {
+    this._maxlength = 8;
+    this._title = (emoji, text, color) => {
+      let spacing = '';
+      if (text.length < this._maxlength) {
+        for (let i = 0; i < this._maxlength - text.length; i++) {
+          spacing += ' ';
+        }
       }
-    }
-    const msg = color ? `${chalk[color](text)}${spacing}` : text + spacing;
-    return `${emoji}  ${msg}`;
+      const msg = color ? `${chalk[color](text)}${spacing}` : text + spacing;
+      return `${emoji}  ${msg}`;
+    };
   }
   success(...msg) {
     log(this._title(emoji.success, 'Success', 'green'), ...msg);

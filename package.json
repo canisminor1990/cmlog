@@ -19,6 +19,7 @@
 	],
 	"scripts": {
 		"build": "babel src/**/* -d dist",
+		"test": "node src/test.js",
 		"release": "standard-version && yarn build && git push --follow-tags && npm publish",
 		"lint": "lint-staged",
 		"lint:es": "eslint --fix .js src && eslint --fix .js dist"
