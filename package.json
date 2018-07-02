@@ -1,64 +1,64 @@
 {
-	"name": "cmlog",
-	"version": "1.0.0",
-	"description": "Emoji console logger",
-	"main": "./dist/index.js",
-	"module": "./src/index.js",
-	"author": "canisminor <i@canisminor.cc>",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/canisminor1990/cmlog.git"
-	},
-	"files": [
-		"dist",
-		"src"
-	],
-	"keywords": [
-		"console",
-		"logger"
-	],
-	"scripts": {
-		"build": "babel src/index.js -d dist",
-		"test": "node src/test.js",
-		"release": "standard-version && yarn build && git push --follow-tags && npm publish",
-		"lint": "lint-staged",
-		"lint:es": "eslint --fix .js src && eslint --fix .js dist"
-	},
-	"pre-commit": [
-		"lint"
-	],
-	"lint-staged": {
-		"src/**/*.js": [
-			"eslint --fix",
-			"git add"
-		],
-		"dist/**/*.js": [
-			"eslint --fix",
-			"git add"
-		]
-	},
-	"license": "MIT",
-	"dependencies": {
-		"chalk": "^2.4.1"
-	},
-	"devDependencies": {
-		"@babel/cli": "^7.0.0-beta.40",
-		"@babel/core": "^7.0.0-beta.40",
-		"@babel/preset-env": "^7.0.0-beta.40",
-		"@babel/preset-stage-0": "^7.0.0-beta.40",
-		"eslint": "^4.13.1",
-		"eslint-config-prettier": "^2.9.0",
-		"eslint-config-standard": "^10.2.1",
-		"eslint-plugin-import": "^2.7.0",
-		"eslint-plugin-node": "^5.2.0",
-		"eslint-plugin-prettier": "^2.3.1",
-		"eslint-plugin-promise": "^3.5.0",
-		"eslint-plugin-standard": "^3.0.1",
-		"expect": "^1.20.2",
-		"husky": "^0.14.3",
-		"lint-staged": "^4.3.0",
-		"pre-commit": "^1.2.2",
-		"prettier": "^1.13.7",
-		"standard-version": "^4.4.0"
-	}
+  "name": "cmlog",
+  "version": "1.0.1",
+  "description": "Emoji console logger",
+  "main": "./dist/index.js",
+  "module": "./src/index.js",
+  "author": "canisminor <i@canisminor.cc>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canisminor1990/cmlog.git"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "console",
+    "logger"
+  ],
+  "scripts": {
+    "build": "babel src/index.js -d dist",
+    "test": "node src/test.js",
+    "release": "standard-version && yarn build && git push --follow-tags && npm publish",
+    "lint": "lint-staged",
+    "lint:es": "eslint --fix .js src && eslint --fix .js dist"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "lint-staged": {
+    "src/**/*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "dist/**/*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.40",
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "@babel/preset-stage-0": "^7.0.0-beta.40",
+    "eslint": "^4.13.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "expect": "^1.20.2",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.13.7",
+    "standard-version": "^4.4.0"
+  }
 }
