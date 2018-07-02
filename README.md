@@ -3,7 +3,7 @@
 [![NPM version](https://img.shields.io/npm/v/cmlog.svg?style=flat)](https://npmjs.org/package/cmlog)
 [![NPM downloads](http://img.shields.io/npm/dm/cmlog.svg?style=flat)](https://npmjs.org/package/cmlog)
 
-Emoji console logger
+✏️ Emoji console logger
 
 ## Installation
 
