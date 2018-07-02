@@ -22,7 +22,7 @@ $ npm i cmlog
 ## Getting started
 
 ```js
-const cmlog = require('cmlog')
+import cmlog from "cmlog"
 
 // See types section for all available types
 cmlog.debug('export something')
@@ -92,6 +92,20 @@ Terminal log:
 - `magentaBright`
 - `cyanBright`
 - `whiteBright`
+
+## Config
+
+```js
+import { Cmlog } from "cmlog"
+
+// default config
+const cmlog = new Cmlog({
+      align    : true, // whether to align info
+      maxLength: 8, // (align:true) the max spacings to add
+      debug    : true, // whether to show debug log
+      time     : false // whether to show time info
+})
+```
 
 ## License
 
