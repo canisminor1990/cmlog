@@ -7,13 +7,13 @@ const emoji = {
   info: String.fromCodePoint(0x1f535), // 🔵
   debug: String.fromCodePoint(0x1f41b), // 🐛
   start: String.fromCodePoint(0x1f476), // 👶
-  build: String.fromCodePoint(0x1f4e6), // 📦
+  pack: String.fromCodePoint(0x1f4e6), // 📦
   module: String.fromCodePoint(0x26aa), // ⚪
   waitting: String.fromCodePoint(0x231b), // ⌛
   boosting: String.fromCodePoint(0x1f525), // 🔥
   done: String.fromCodePoint(0x2728), // ✨
 };
-class CmLog {
+class Cmlog {
   _maxlength = 8;
   _title(emoji, text, color) {
     let spacing = '';
@@ -53,14 +53,14 @@ class CmLog {
       [message, chalk.grey(stack.join('\n'))].join('\n')
     );
   }
-  build(...msg) {
-    log(this._title(emoji.pack, 'Build', 'magenta'), ...msg);
-  }
-  module(title, ...msg) {
-    log(this._title(emoji.pack, module, 'cyan'), ...msg);
-  }
   boosting(...msg) {
     log(this._title(emoji.boosting, 'Boosting', 'magenta'), ...msg);
+  }
+  pack(title, ...msg) {
+    log(this._title(emoji.pack, title, 'magenta'), ...msg);
+  }
+  module(title, ...msg) {
+    log(this._title(emoji.pack, title, 'cyan'), ...msg);
   }
   json(obj, title) {
     log([this._title(emoji.module, title || 'Log'), JSON.stringify(obj, null, 2)].join('\n'));
@@ -69,4 +69,4 @@ class CmLog {
     return chalk[color](...msg);
   }
 }
-module.exports = new CmLog();
+module.exports = new Cmlog();
