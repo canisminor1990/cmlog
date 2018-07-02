@@ -1,6 +1,6 @@
 {
   "name": "cmlog",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "Emoji console logger",
   "main": "./dist/index.js",
   "module": "./src/index.js",
