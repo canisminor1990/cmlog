@@ -1,6 +1,6 @@
 {
   "name": "cmlog",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Emoji console logger",
   "main": "./dist/index.js",
   "module": "./src/index.js",
@@ -20,7 +20,7 @@
   "scripts": {
     "build": "babel src -d dist && yarn lint:es",
     "test": "node test/index.js",
-    "release": "standard-version && git push --follow-tags && npm publish",
+    "release": "standard-version && git push --follow-tags && yarn publish",
     "lint": "lint-staged",
     "lint:es": "eslint --fix .js src && eslint --fix .js dist"
   },
